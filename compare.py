@@ -51,7 +51,7 @@ def remove_spaces(text: str) -> str:
 
 def clear(text: io.TextIOWrapper) -> str:
     """Clear text from comments, docstrings and spaces."""
-    return remove_spaces(remove_docstring(remove_comments(text)))
+    return remove_spaces(remove_docstring(remove_comments(text))).lower()
 
 
 def compare(input_text1: io.TextIOWrapper, input_text2: io.TextIOWrapper) -> float:
